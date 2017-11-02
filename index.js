@@ -1,15 +1,15 @@
 var katzDeli = [];
 
 function takeANumber(katzDeliLine, name) {
-  katzDeliLine.push(name);
-  var position = katzDeliLine.indexOf(name) + 1;
+  katzDeli.push(name);
+  var position = katzDeli.indexOf(name) + 1;
   return `Welcome, ${name}. You are number ${position} in line.`;
 }
 
 function nowServing() {
-  if (katzDeliLine.length > 0) {
-    var name = katzDeliLine[0];
-    katzDeliLine.shift();
+  if (katzDeli.length > 0) {
+    var name = katzDeli[0];
+    katzDeli.shift();
     return `Now serving ${name}.`;
       }
   else {
