@@ -6,9 +6,13 @@ function takeANumber(katzDeliLine, name) {
   return `Welcome, ${name}. You are number ${position} in line.`;
 }
 
-function nowService() {
-  var position = katzDeliLine.indexOf(name) + 1;
+function nowServing() {
   if (katzDeliLine.length > 0) {
-    return `Now serving number ${position}`
+    var name = katzDeliLine[0];
+    return `Now serving ${name}.`;
+    katzDeliLine.shift();
+  }
+  else {
+    return "There is nobody waiting to be served!"
   }
 }
